@@ -4,6 +4,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
 import SignUp from "./pages/SignUp";
+import Editor from "./pages/Editor";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/login" element={<login />} />
+          <Route path="/editor/:projectID" element={<Editor/>} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>

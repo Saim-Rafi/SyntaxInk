@@ -98,3 +98,21 @@ html{
   flex-wrap: wrap !important;
   gap: 10px;
 }
+
+.lightMode{
+  background-color: #fff !important;
+  color: black !important;
+}
+
+.lightMode .navbar{
+  background-color: #fff;
+}
+
+.lightMode .tabs{
+  background-color: #f7f7f7;
+}
+
+.lightMode .tabs div{
+  background-color: #555;
+  color: #000;
+}

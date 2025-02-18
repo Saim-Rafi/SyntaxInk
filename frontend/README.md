@@ -17,3 +17,5 @@ Tech stack used
 --vite
 --tailwind
 --react avatar
+--react icons
+--npm i @monaco-editor/react
