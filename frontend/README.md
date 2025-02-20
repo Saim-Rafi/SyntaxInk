@@ -19,3 +19,8 @@ Tech stack used
 --react avatar
 --react icons
 --npm i @monaco-editor/react
+--express generator
+--mongoose 
+--jsonwebtoken 
+--cors 
+--bcryptjs
