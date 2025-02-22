@@ -88,7 +88,7 @@ router.post("/createProject", async (req, res) => {
   let { userId, title } = req.body;
   let user = await userModel.findOne({ _id: userId });
   if (user) {
-    let project = projectModel.create({
+    let project = await projectModel.create({
       title: title,
       createdBy: userId,
     });
@@ -96,6 +96,21 @@ router.post("/createProject", async (req, res) => {
       success: true,
       message: "Project created successfully",
       projectId: project._id,
+    });
+  } else {
+    return res.json({ success: false, message: "User not found!" });
+  }
+});
+
+router.post("/getProjects", async (req, res) => {
+  let { userId } = req.body;
+  let user = await userModel.findOne({ _id: userId });
+  if (user) {
+    let projects = await projectModel.find({ createdBy: userId });
+    return res.json({
+      success: true,
+      message: "Project created successfully",
+      projects: projects,
     });
   } else {
     return res.json({ success: false, message: "User not found!" });

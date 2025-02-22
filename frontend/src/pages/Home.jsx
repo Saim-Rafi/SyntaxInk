@@ -38,7 +38,7 @@ const Home = () => {
           setIsCreateModelShow(false);
           setProjTitle("");
           alert("Project Created Successfully");
-          navigate(`/editior/${data.projectId}`);
+          navigate(`/editor/${data.projectId}`);
         } else {
           alert("Something Went Wrong");
         }

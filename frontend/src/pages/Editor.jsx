@@ -6,7 +6,7 @@ import { AiOutlineExpandAlt } from "react-icons/ai";
 import { api_base_url } from '../helper';
 import { useParams } from 'react-router-dom';
 
-const Editior = () => {
+const Editor = () => {
   const [tab, setTab] = useState("html");
   const [isLightMode, setIsLightMode] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -177,4 +177,4 @@ const Editior = () => {
   );
 };
 
-export default Editior;
+export default Editor;
