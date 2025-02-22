@@ -118,17 +118,37 @@ router.post("/getProjects", async (req, res) => {
 });
 
 router.post("/deleteProject", async (req, res) => {
-  let {userId, progId} = req.body;
+  let { userId, progId } = req.body;
   let user = await userModel.findOne({ _id: userId });
   if (user) {
     let project = await projectModel.findOneAndDelete({ _id: progId });
     return res.json({ success: true, message: "Project deleted successfully" });
-  }
-  else {
+  } else {
     return res.json({ success: false, message: "User not found!" });
   }
 });
 
+router.post("/getProject", async (req, res) => {
+  let {userId,projId} = req.body;
+  let user = await userModel.findOne({ _id: userId });
+  if (user) {
+    let project = await projectModel.findOne({ _id: projId });
+    return res.json({ success: true, message: "Project fetched successfully", project: project });
+  }
+  else{
+    return res.json({ success: false, message: "User not found!" });
+  }
+});
 
+router.post("/updateProject", async(req,res)=>{
+  let {userId,htmlCode,cssCode,jsCode,projId} = req.body;
+  let user = await userModel.findOne({_id:userId});
+  if (user){
+    let project = await projectModel.findOneAndUpdate({_id:projId},{htmlCode:htmlCode,cssCode:cssCode,jsCode:jsCode});
+    return res.json({success:true,message:"Project updated successfully"});
+  }else{
+    return res.json({success:false , message:"User not found!"});
+  }
+});
 
 module.exports = router;
