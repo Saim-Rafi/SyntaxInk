@@ -10,6 +10,7 @@ Currently, two official plugins are available:
 
 
 npm run dev in frontend to run 
+npx nodemon in backend to run
 
 
 Tech stack used
@@ -24,3 +25,4 @@ Tech stack used
 --jsonwebtoken 
 --cors 
 --bcryptjs
+--nodemon

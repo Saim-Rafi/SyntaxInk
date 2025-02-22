@@ -3,7 +3,7 @@ import logo from "../images/logo.png";
 import image from "../images/auth_page_side.jpg";
 import { useNavigate } from 'react-router-dom';
 import { Link, useNavigate } from 'react-router-dom';
-import { api_base_url } from '../helper';
+import { api_base_url } from '../helper'; 
 
 const login = () => {
     const [email,setEmail] = useState("");
