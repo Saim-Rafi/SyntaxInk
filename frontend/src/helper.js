@@ -10,6 +10,6 @@ export const removeClass = (el,className) => {
 };
 
 
-export const api_base_url = "http://localhost:3000"
+export const api_base_url = "http://127.0.0.1:3000"
 
 //127.0.0.1

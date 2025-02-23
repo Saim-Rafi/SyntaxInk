@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import Navbar from '../components/Navbar'
+import React, { useEffect, useState } from 'react';
+import Navbar from "../components/Navbar";
 import ListCard from '../components/ListCard';
 import GridCard from '../components/GridCard';
 import { api_base_url } from '../helper';

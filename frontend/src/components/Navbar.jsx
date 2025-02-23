@@ -32,13 +32,13 @@ const Navbar = ({ isGridLayout, setIsGridLayout }) => {
         }
       });
   }, []);
- 
+
   const logout = () => {
     localStorage.removeItem("userId");
     localStorage.removeItem("token");
     localStorage.removeItem("isLoggedIn");
     window.location.reload();
-  }; 
+  };
 
   return (
     <>
