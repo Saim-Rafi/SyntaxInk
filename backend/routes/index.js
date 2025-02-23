@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-var bcrpyt = require("bcryptjs");
+var bcrypt = require("bcryptjs");
 var jwt = require("jsonwebtoken");
 var userModel = require("../models/userModel");
 var projectModel = require("../models/projectModel");
@@ -129,25 +129,41 @@ router.post("/deleteProject", async (req, res) => {
 });
 
 router.post("/getProject", async (req, res) => {
-  let {userId,projId} = req.body;
+  let { userId, projId } = req.body;
   let user = await userModel.findOne({ _id: userId });
   if (user) {
     let project = await projectModel.findOne({ _id: projId });
-    return res.json({ success: true, message: "Project fetched successfully", project: project });
-  }
-  else{
+    return res.json({
+      success: true,
+      message: "Project fetched successfully",
+      project: project,
+    });
+  } else {
     return res.json({ success: false, message: "User not found!" });
   }
 });
 
-router.post("/updateProject", async(req,res)=>{
-  let {userId,htmlCode,cssCode,jsCode,projId} = req.body;
-  let user = await userModel.findOne({_id:userId});
-  if (user){
-    let project = await projectModel.findOneAndUpdate({_id:projId},{htmlCode:htmlCode,cssCode:cssCode,jsCode:jsCode});
-    return res.json({success:true,message:"Project updated successfully"});
-  }else{
-    return res.json({success:false , message:"User not found!"});
+router.post("/updateProject", async (req, res) => {
+  let { userId, htmlCode, cssCode, jsCode, projId } = req.body;
+  let user = await userModel.findOne({ _id: userId });
+
+  if (user) {
+    let project = await projectModel.findOneAndUpdate(
+      { _id: projId },
+      { htmlCode: htmlCode, cssCode: cssCode, jsCode: jsCode },
+      { new: true } // This option returns the updated document
+    );
+
+    if (project) {
+      return res.json({
+        success: true,
+        message: "Project updated successfully",
+      });
+    } else {
+      return res.json({ success: false, message: "Project not found!" });
+    }
+  } else {
+    return res.json({ success: false, message: "User not found!" });
   }
 });
 

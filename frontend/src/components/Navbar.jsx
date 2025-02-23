@@ -38,7 +38,7 @@ const Navbar = ({ isGridLayout, setIsGridLayout }) => {
     localStorage.removeItem("token");
     localStorage.removeItem("isLoggedIn");
     window.location.reload();
-  };
+  }; 
 
   return (
     <>
