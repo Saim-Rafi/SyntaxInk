@@ -56,33 +56,50 @@
 
 ### 1️⃣ Clone the Repository
 
-```bash
+\`\`\`bash
 git clone https://github.com/Saim-Rafi/SyntaxInk.git
 cd SyntaxInk
+\`\`\`
 
 ### 2️⃣ Set up the Backend
+
+\`\`\`bash
 cd backend
 npm install
 npm run dev
+\`\`\`
 
-### 3️⃣ Setup Frontend
+### 3️⃣ Set up the Frontend
+
+\`\`\`bash
 cd ../frontend
 npm install
 npm run dev
+\`\`\`
+
+---
 
 ## 🔐 Environment Variables
-Inside your backend/.env file:
+
+Inside your \`backend/.env\` file:
+
+\`\`\`
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
+\`\`\`
 
+---
 
 ## 📈 Improvements in Developer Experience
-✅ Reduced debugging time by 30% with instant feedback.
 
-✅ Built with performance in mind using Vite and optimized API structure.
+- ✅ Reduced debugging time by 30% with instant feedback.  
+- ✅ Built with performance in mind using Vite and optimized API structure.  
+- ✅ Clean, responsive UI that adapts well across screen sizes.  
 
-✅ Clean, responsive UI that adapts well across screen sizes.
+---
 
 ## 📄 License
-Licensed under the MIT License
+
+Licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
+
