@@ -57,7 +57,7 @@
 ### 1️⃣ Clone the Repository
 
 \`\`\`bash
-git clone https://github.com/Saim-Rafi/SyntaxInk.git
+git clone https://github.com/Saim-Rafi/SyntaxInk.git <br>
 cd SyntaxInk
 \`\`\`
 
@@ -84,9 +84,9 @@ npm run dev
 Inside your \`backend/.env\` file:
 
 \`\`\`
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
+PORT=5000 <br>
+MONGO_URI=your_mongodb_connection_string <br>
+JWT_SECRET=your_secret_key <br>
 \`\`\`
 
 ---
