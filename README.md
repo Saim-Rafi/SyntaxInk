@@ -91,6 +91,15 @@ JWT_SECRET=your_secret_key <br>
 
 ---
 
+## 📸 Preview
+<p float="left">
+  <img width="45%" alt="Screenshot 2025-04-30 at 1 20 57 PM" src="https://github.com/user-attachments/assets/366d4446-ae21-4d39-bfea-043a8217313c" />
+  <img width="45%" alt="Screenshot 2025-04-30 at 1 21 21 PM" src="https://github.com/user-attachments/assets/e9b81a9b-f11d-4d01-9eec-579fb196febb" />
+  <img width="45%" alt="Screenshot 2025-04-30 at 1 21 41 PM" src="https://github.com/user-attachments/assets/40b4c686-c817-4b3c-8f9f-036876d14bb1" />
+  <img width="45%" alt="Screenshot 2025-04-30 at 1 21 56 PM" src="https://github.com/user-attachments/assets/72235d5e-4536-4688-bdbd-4ba46935b0db" />
+  
+</p>
+
 ## 📈 Improvements in Developer Experience
 
 - ✅ Reduced debugging time by 30% with instant feedback.  
